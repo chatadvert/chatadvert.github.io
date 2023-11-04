@@ -19,7 +19,7 @@
 
     <main>
         <section class="container">
-            <h2>Przeglądaj nasze zagadki według kategorii</h2>
+            <h2>Zaznacz interesujące Cię kategorie i wklej kod na czacie Twitch</h2>
             <div class="category-input">
                 <input type="text" id="commandOutput" placeholder="Wybrane kategorie pojawią się tutaj..." readonly>
             </div>
@@ -82,7 +82,7 @@
                         selectedCategories = selectedCategories.filter(item => item !== category);
                         this.classList.remove('selected');
                     }
-                    commandOutput.value = '!riddle ' + selectedCategories.join(' ');
+                    commandOutput.value = '!kategorie ' + selectedCategories.join(' ');
                 });
             });
         });
