@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kategorie Zagadek - ChatAdvert</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategorie Zagadek - ChatAdvert</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <h1>Kategorie Zagadek</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Strona główna</a></li>
-      <li><a href="categories.html">Kategorie</a></li>
-    </ul>
-  </nav>
-</header>
+    <header>
+        <h1>ChatAdvert</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="categories.html">Kategorie</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-  <section>
-    <h2>Przeglądaj nasze zagadki według kategorii</h2>
-    <div class="category-list">
-      <ul>
-        <li>Anime</li>
-        <li>Astronomia</li>
-        <li>Bloodborne</li>
-        <li>CS:GO</li>
-        <li>Cyberpunk 2077</li>
-        <li>Dragon Ball</li>
-        <li>The Elder Scrolls</li>
-        <li>F1</li>
-        <li>Filmy</li>
-        <li>Geografia</li>
-        <li>Gothic</li>
-        <li>Gry</li>
-        <li>Gwiezdne Wojny</li>
-        <li>Historia</li>
-        <li>Kreskówki</li>
-        <li>League of Legends</li>
-        <li>Matematyka</li>
-        <li>Militaria</li>
-        <li>Minecraft</li>
-        <li>Motoryzacja</li>
-        <li>Muzyka</li>
-        <li>Piłka Nożna</li>
-        <li>Pokemony</li>
-        <li>Programowanie</li>
-        <li>Siatkówka</li>
-        <li>Sport</li>
-        <li>Technologia</li>
-        <li>Twitch</li>
-        <li>World of Tanks</li>
-        <li>Zagadki</li>
-        <li>Zwierzęta</li>
-      </ul>
-    </div>
-  </section>
-</main>
+    <main>
+        <section class="container">
+            <h2>Przeglądaj nasze zagadki według kategorii</h2>
+            <div class="category-input">
+                <input type="text" id="commandOutput" placeholder="Wybrane kategorie pojawią się tutaj..." readonly>
+            </div>
+            <div class="category-buttons">
+                <!-- Przyciski kategorii -->
+                <button class="category-btn" data-category="Anime">Anime</button>
+                <button class="category-btn" data-category="Astronomia">Astronomia</button>
+                <button class="category-btn" data-category="Bloodborne">Bloodborne</button>
+                <button class="category-btn" data-category="CSGO">CS:GO</button>
+                <button class="category-btn" data-category="Cyberpunk2077">Cyberpunk 2077</button>
+                <button class="category-btn" data-category="DragonBall">Dragon Ball</button>
+                <button class="category-btn" data-category="TheElderScrolls">The Elder Scrolls</button>
+                <button class="category-btn" data-category="F1">F1</button>
+                <button class="category-btn" data-category="Filmy">Filmy</button>
+                <button class="category-btn" data-category="Geografia">Geografia</button>
+                <button class="category-btn" data-category="Gothic">Gothic</button>
+                <button class="category-btn" data-category="Gry">Gry</button>
+                <button class="category-btn" data-category="GwiezdneWojny">Gwiezdne Wojny</button>
+                <button class="category-btn" data-category="Historia">Historia</button>
+                <button class="category-btn" data-category="Kreskowki">Kreskówki</button>
+                <button class="category-btn" data-category="LeagueofLegends">League of Legends</button>
+                <button class="category-btn" data-category="Matematyka">Matematyka</button>
+                <button class="category-btn" data-category="Militaria">Militaria</button>
+                <button class="category-btn" data-category="Minecraft">Minecraft</button>
+                <button class="category-btn" data-category="Motoryzacja">Motoryzacja</button>
+                <button class="category-btn" data-category="Muzyka">Muzyka</button>
+                <button class="category-btn" data-category="PilkaNozna">Piłka Nożna</button>
+                <button class="category-btn" data-category="Pokemony">Pokemony</button>
+                <button class="category-btn" data-category="Programowanie">Programowanie</button>
+                <button class="category-btn" data-category="Siatkowka">Siatkówka</button>
+                <button class="category-btn" data-category="Sport">Sport</button>
+                <button class="category-btn" data-category="Technologia">Technologia</button>
+                <button class="category-btn" data-category="Twitch">Twitch</button>
+                <button class="category-btn" data-category="WorldofTanks">World of Tanks</button>
+                <button class="category-btn" data-category="Zagadki">Zagadki</button>
+                <button class="category-btn" data-category="Zwierzeta">Zwierzęta</button>
+            </div>
+        </section>
+    </main>
 
-<footer>
-  <p>&copy; 2023 ChatAdvert. Wszelkie prawa zastrzeżone.</p>
-</footer>
+    <footer>
+        <p>&copy; 2023 ChatAdvert. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+    
+    <script>
+        // JavaScript do obsługi wyboru kategorii i generowania komendy
+        document.addEventListener('DOMContentLoaded', function() {
+            const commandOutput = document.getElementById('commandOutput');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+
+            let selectedCategories = [];
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    if (!selectedCategories.includes(category)) {
+                        selectedCategories.push(category);
+                        this.classList.add('selected');
+                    } else {
+                        selectedCategories = selectedCategories.filter(item => item !== category);
+                        this.classList.remove('selected');
+                    }
+                    commandOutput.value = '!riddle ' + selectedCategories.join(' ');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
