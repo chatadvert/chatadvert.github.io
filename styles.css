@@ -23,9 +23,16 @@ header h1 {
     margin: 0;
 }
 
+/* Style nawigacji */
+nav {
+    background-color: #333;
+    text-align: center; /* Wyśrodkowanie nawigacji */
+}
+
 nav ul {
     list-style: none;
-    background-color: #333;
+    padding: 0;
+    display: inline-block; /* Centrowanie listy */
 }
 
 nav ul li {
@@ -34,26 +41,24 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: white; /* Biały tekst dla linków */
     background: #333;
-    padding: .5rem 1rem;
+    padding: 0.8rem 1.5rem; /* Większe paddingi dla linków */
     display: inline-block;
+    margin: 5px; /* Mała przerwa między linkami */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    font-size: 1.2em; /* Większa czcionka */
+    transition: background 0.3s; /* Animacja tła */
 }
 
 nav a:hover,
 nav a:focus {
-    background: #555;
-}
-
-/* Dodatkowe style dla większych linków */
-nav ul li a {
-    font-size: 1.2em; /* Zwiększanie rozmiaru tekstu */
-    color: black; /* Zmiana koloru tekstu */
+    background: #555; /* Ciemniejsze tło przy najechaniu */
 }
 
 /* Style dla sekcji głównej */
 main {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* Style dla stopki */
