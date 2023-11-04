@@ -103,12 +103,25 @@ footer {
     transition: background-color 0.3s;
 }
 
+.category-btn {
+    border: none;
+    padding: 1rem 2rem; /* Zwiększony padding dla większego przycisku */
+    margin: 0.5rem; /* Większa przerwa między przyciskami */
+    font-size: 1.4rem; /* Większy rozmiar czcionki */
+    color: white;
+    border-radius: 5px; /* Lekko większe zaokrąglenie rogów */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Dodanie animacji transformacji */
+}
+
 .category-btn:hover {
     background-color: #8fbc8f;
+    transform: scale(1.05); /* Lekkie powiększenie przycisku przy najechaniu */
 }
 
 .category-btn.selected {
-    background-color: #4b0082;
+    background-color: #aaa; /* Wyszarzenie zaznaczonego przycisku */
+    color: #333; /* Ciemniejszy tekst dla kontrastu */
 }
 
 /* Style dla pola tekstowego */
