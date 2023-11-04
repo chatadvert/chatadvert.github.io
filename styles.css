@@ -93,3 +93,30 @@ footer {
     color: #333;
     font-size: 1.1em;
 }
+   border: none;
+    padding: 0.8rem 1.5rem; /* Zwiększony padding dla większego przycisku */
+    margin: 0.3rem;
+    font-size: 1.2rem; /* Większy rozmiar czcionki */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #8fbc8f;
+}
+
+.category-btn.selected {
+    background-color: #4b0082;
+}
+
+/* Style dla pola tekstowego */
+#commandOutput {
+    width: 100%;
+    padding: 0.8rem; /* Większy padding */
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.1rem; /* Większy rozmiar czcionki */
+}
