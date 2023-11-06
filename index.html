@@ -7,6 +7,29 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   /* (style content unchanged) */
+
+  /* Nowy styl dla komend */
+  .command-description {
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+  }
+  
+  /* Dodanie odstępów między definicjami */
+  dd + dt {
+    margin-top: 15px;
+  }
+  
 </style>
 </head>
 <body>
@@ -34,32 +57,42 @@
     <!-- Start of new content -->
     <section class="card">
       <h3>Dostępne Komendy Czatu</h3>
-      <dl>
+      <div class="command-description">
         <dt>!point</dt>
         <dd>Sprawdź swoją ilość punktów w dowolnym momencie, aby zobaczyć, ile udało Ci się zebrać. Punkty zdobywasz za aktywność na czacie, rozwiązywanie zagadek oraz uczestnictwo w różnych interakcjach.</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!zagadka</dt>
         <dd>Kiedy użyjesz tej komendy, bot zadaje losową zagadkę z wybranej przez Ciebie kategorii. Rozwiąż zagadkę i zdobądź punkty, które możesz wymieniać na nagrody w sklepie. Każda poprawna odpowiedź to zwiększenie swoich punktów!</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!daily</dt>
         <dd>Odbierz codzienne punkty za regularne wizyty na czacie. To świetny sposób na rozpoczęcie dnia i zwiększenie swoich szans w rankingu widzów. Pamiętaj, aby codziennie wracać po więcej!</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!shop</dt>
         <dd>Przejrzyj listę przedmiotów dostępnych w sklepie bota. Znajdziesz tu różnorodne nagrody, od ulepszeń na czacie po ekskluzywne emotikony i inne niespodzianki.</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!sbuy [numer]</dt>
         <dd>Gdy znajdziesz coś, co Ci się podoba w sklepie, użyj tej komendy, aby dokonać zakupu. Po prostu wpisz !sbuy, a następnie numer przedmiotu, który chcesz nabyć. Upewnij się, że masz wystarczającą ilość punktów!</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!status</dt>
         <dd>Zastanawiasz się, na jakim jesteś poziomie w hierarchii bota? Użyj tej komendy, aby dowiedzieć się o swoim statusie. Im wyższy poziom, tym większe przywileje i lepsze nagrody.</dd>
-
+      </div>
+      
+      <div class="command-description">
         <dt>!kategorie</dt>
         <dd>Zarządzaj swoimi preferowanymi kategoriami zagadek. Jeśli lubisz określone tematy, ta komenda pozwoli Ci dostosować zagadki do Twoich zainteresowań, zwiększając tym samym Twoją szansę na wygraną.</dd>
-      </dl>
+      </div>
     </section>
     <!-- End of new content -->
-
-    <!-- Removed old content -->
 
   </div>
 </main>
