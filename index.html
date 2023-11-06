@@ -30,6 +30,28 @@
     margin-top: 15px;
   }
   
+  /* Styl dla stopki */
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .main-container {
+    min-height: 100%;
+    padding-bottom: 60px; /* Ustaw wysokość stopki */
+    box-sizing: border-box;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    height: 60px; /* Ustaw wysokość stopki */
+    margin-top: -60px; /* Ustaw ujemny margines równy wysokości stopki */
+  }
+
 </style>
 </head>
 <body>
@@ -47,9 +69,8 @@
   </div>
 </nav>
 
-<main>
+<main class="main-container">
   <div class="container">
-    <section class="card">
       <h2>Odkryj Możliwości Bota ChatAdvert</h2>
       <p>ChatAdvert to innowacyjne rozwiązanie dla streamerów Twitch, które ułatwia interakcję z publicznością i automatyzuje zarządzanie czatem. Nasz bot wykorzystuje zaawansowane algorytmy, aby zapewnić niezapomniane doświadczenia dla Ciebie i Twoich widzów.</p>
     </section>
@@ -94,7 +115,7 @@
     </section>
     <!-- End of new content -->
 
-   </div>
+  </div>
 </main>
 
 <footer>
